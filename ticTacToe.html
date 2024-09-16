@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures our game is responsive -->
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="ticTacToe.css">
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+
+    <!-- This is our main menu where the player chooses the game mode -->
+    <div id="main-menu">
+        <!-- Button for Player vs Player mode -->
+        <button id="pvp">Player vs Player</button>
+
+        <!-- Button for Player vs CPU mode -->
+        <button id="cpu">Player vs CPU</button>
+
+        <!-- Button to toggle between Light and Dark modes -->
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </div>
+
+    <!-- The game board itself. It's hidden by default, but will appear when a game mode is chosen -->
+    <div id="game-board" class="hidden">
+        <!-- Each cell in the Tic-Tac-Toe board is a div with a data-index attribute -->
+        <!-- The data-index helps us track where the player has clicked -->
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+
+    <!-- This area shows the status of the game, like whose turn it is or if someone wins -->
+    <div id="status"></div>
+
+    <!-- Control buttons for restarting the game or going back to the main menu -->
+    <!-- Hidden by default and will show up during the game -->
+    <div id="controls" class="hidden">
+        <!-- Restart button to reset the current game -->
+        <button id="restart">Restart Game</button>
+
+        <!-- Button to return to the main menu -->
+        <button id="back-to-menu">Back to Main Menu</button>
+    </div>
+
+    <script src="ticTacToe.js"></script>
+</body>
+</html>

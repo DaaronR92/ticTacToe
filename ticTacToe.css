@@ -1,0 +1,90 @@
+/* ticTacToe.css */
+
+/* Global styles that apply to the entire page */
+body {
+    font-family: Arial, sans-serif;  /* Setting the font to Arial for a clean look */
+    text-align: center;  /* Centering all content */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;  /* Light gray background for the page */
+    color: #000;  /* Default text color is black */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition for dark mode changes */
+}
+
+h1 {
+    margin-top: 20px;  /* Adding some space above the main heading */
+}
+
+/* This class hides elements from view when applied */
+.hidden {
+    display: none;
+}
+
+#main-menu {
+    margin-top: 50px;  /* Pushing the main menu down from the top a bit */
+}
+
+/* Making sure the game board and controls are hidden when the page first loads */
+#game-board, #controls, #status {
+    display: none;  /* Initially hidden to show only the main menu */
+}
+
+#game-board {
+    display: grid;  /* Using CSS Grid to create a 3x3 grid for the Tic-Tac-Toe board */
+    grid-template-columns: repeat(3, 100px);  /* Three columns of 100px width */
+    grid-template-rows: repeat(3, 100px);  /* Three rows of 100px height */
+    gap: 5px;  /* Space between the cells */
+    justify-content: center;  /* Centering the board horizontally */
+    margin: 20px auto;  /* Adding space around the board and centering it */
+}
+
+/* Each cell in the Tic-Tac-Toe board */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;  /* White background for the cells */
+    border: 2px solid #000;  /* Black border around each cell */
+    display: flex;  /* Flexbox to center the text inside */
+    justify-content: center;  /* Horizontally centering content in the cell */
+    align-items: center;  /* Vertically centering content in the cell */
+    font-size: 2rem;  /* Large text size for the "X" or "O" */
+    cursor: pointer;  /* Cursor turns to a pointer when hovering over a cell */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition for color changes, especially for dark mode */
+}
+
+/* Styles for the control buttons (Restart and Back to Main Menu) */
+#controls {
+    margin-top: 20px;  /* Adds space above the control buttons */
+}
+
+/* Styling all buttons on the page */
+button {
+    padding: 10px 20px;  /* Adds padding inside the button for a better look */
+    margin: 5px;  /* Adds space between buttons */
+    font-size: 1rem;  /* Font size for buttons */
+    cursor: pointer;  /* Cursor turns to pointer when hovering over buttons */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition for color changes */
+}
+
+/* Dark Mode Styling */
+
+/* When the body has the "dark-mode" class, these styles are applied */
+body.dark-mode {
+    background-color: #121212;  /* Dark background for dark mode */
+    color: #ffffff;  /* White text for better contrast in dark mode */
+}
+
+body.dark-mode .cell {
+    background-color: #333;  /* Dark gray background for the cells in dark mode */
+    border-color: #fff;  /* White borders for better visibility in dark mode */
+}
+
+body.dark-mode button {
+    background-color: #444;  /* Darker buttons in dark mode */
+    color: #fff;  /* White text on buttons for contrast in dark mode */
+}
+
+body.dark-mode #game-board .cell {
+    color: #fff;  /* White text for the "X" or "O" inside the cells in dark mode */
+    border-color: #fff;  /* White borders for cells */
+}
